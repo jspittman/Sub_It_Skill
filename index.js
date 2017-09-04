@@ -179,6 +179,23 @@ def sour_cream_sub():
     should_end_session = False
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
+        
+def butter_milk_sub():
+
+    session_attributes = {}
+    card_title = "ButterMilk"
+    speech_output = "For one cup buttermilk, substitute just under one cup regular-milk.  Mix with one tablespoon vinegar or lemon" \
+                    "juice.  You can also substitute with plain yogurt or sour cream, thinned with milk or water, to the proper" \
+                    "consistency.  You can also substitute by adding one and three quarters teaspoon of cream of tartar to a cup-of" \
+                    "milk.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 
 # --------------- Events ------------------
 
@@ -218,6 +235,8 @@ def on_intent(intent_request, session):
         return butter_sub()
     elif intent_name == "SourCreamIntent":
         return sour_cream_sub()
+    elif intent_name == "ButterMilkIntent":
+        return butter_milk_sub()
     elif intent_name == "ContinueIntent":
         return keep_going()
     elif intent_name == "AMAZON.HelpIntent":
