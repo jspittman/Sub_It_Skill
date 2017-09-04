@@ -10,11 +10,24 @@ WhatsMyColorIntent give me my favorite color
 WhatsMyColorIntent give me my color
 WhatsMyColorIntent what my color is
 WhatsMyColorIntent what my favorite color is
-WhatsMyColorIntent yes
-WhatsMyColorIntent yup
-WhatsMyColorIntent sure
-WhatsMyColorIntent yes please
 MyColorIsIntent my favorite color is {Color}
 ButterIntent butter
 AMAZON.StopIntent no
 SourCreamIntent sour cream
+ContinueIntent yes
+ButterMilkIntent buttermilk
+ButterMilkIntent butter milk
+ButterMilkIntent ba milk
+BrownSugarIntent brown sugar
+BrownSugarIntent brownsugar
+BrownSugarIntent brown shuga
+BakingPowderIntent baking powder
+BakingPowderIntent bakin powder
+BakingPowderIntent bacon powder
+HalfandHalfIntent half and half
+HalfandHalfIntent halfnhalf
+MolassesIntent molasses
+MolassesIntent mole asses
+UnChocIntent unsweetened chocolate
+RicottaIntent ricotta cheese
+HeavyCreamIntent heavy cream
