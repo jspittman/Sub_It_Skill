@@ -153,8 +153,10 @@ def keep_going():
 def butter_sub():
 
     session_attributes = {}
-    card_title = "Welcome"
-    speech_output = "A great substitute for butter is applesauce.  Would you like another sub?"
+    card_title = "ButterSub"
+    speech_output = "Butter is a tricky one.  For baking, you can substitute with" \
+                    "an equal amount of margarine or lard. For cooking, substitute" \
+                    "a smaller amount of oil.  Would you like another sub?"
  
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
