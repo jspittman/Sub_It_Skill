@@ -51,7 +51,7 @@ def get_welcome_response():
     session_attributes = {}
     card_title = "Welcome"
     speech_output = "Welcome to Sub It. " \
-                    "What ingredient would you like to sub?"
+                    "What ingredient are you looking to substitute?"
  
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
@@ -64,7 +64,7 @@ def get_welcome_response():
 
 def handle_session_end_request():
     card_title = "Session Ended"
-    speech_output = ""
+    speech_output = "Hope that helped."
     
     # Setting this to true ends the session and exits the skill.
     should_end_session = True
@@ -154,7 +154,7 @@ def butter_sub():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "A great substitue for butter is applesauce.  Would you like another sub?"
+    speech_output = "A great substitute for butter is applesauce.  Would you like another sub?"
  
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
@@ -168,7 +168,7 @@ def sour_cream_sub():
 
     session_attributes = {}
     card_title = "Welcome"
-    speech_output = "A great substitue for sour cream is plain greek yogurt.  Would you like another sub?"
+    speech_output = "A great substitute for sour cream is plain greek yogurt.  Would you like another sub?"
  
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
