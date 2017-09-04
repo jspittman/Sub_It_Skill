@@ -13,21 +13,26 @@ WhatsMyColorIntent what my favorite color is
 MyColorIsIntent my favorite color is {Color}
 ButterIntent butter
 AMAZON.StopIntent no
+AMAZON.StopIntent none
+AMAZON.StopIntent nadda
+AMAZON.StopIntent nope
+AMAZON.StopIntent naw
 SourCreamIntent sour cream
 ContinueIntent yes
 ButterMilkIntent buttermilk
 ButterMilkIntent butter milk
-ButterMilkIntent ba milk
 BrownSugarIntent brown sugar
-BrownSugarIntent brownsugar
 BrownSugarIntent brown shuga
 BakingPowderIntent baking powder
 BakingPowderIntent bakin powder
 BakingPowderIntent bacon powder
 HalfandHalfIntent half and half
-HalfandHalfIntent halfnhalf
 MolassesIntent molasses
-MolassesIntent mole asses
+MolassesIntent about molasses
 UnChocIntent unsweetened chocolate
 RicottaIntent ricotta cheese
 HeavyCreamIntent heavy cream
+SelfRisingIntent self rising flour
+SelfRisingIntent self raiseing flour
+SelfRisingIntent self flour
+SelfRisingIntent self rising flower
