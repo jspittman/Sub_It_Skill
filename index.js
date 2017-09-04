@@ -135,6 +135,21 @@ def butter_sub(intent, session):
     return build_response(session_attributes, build_speechlet_response(
     card_title, speech_output, reprompt_text, should_end_session))
 '''
+
+def keep_going():
+
+    session_attributes = {}
+    card_title = "Keep Going"
+    speech_output = "What ingredient would you like to sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
 def butter_sub():
 
     session_attributes = {}
@@ -201,6 +216,8 @@ def on_intent(intent_request, session):
         return butter_sub()
     elif intent_name == "SourCreamIntent":
         return sour_cream_sub()
+    elif intent_name == "ContinueIntent":
+        return keep_going()
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
