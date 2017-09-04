@@ -71,10 +71,10 @@ def handle_session_end_request():
     return build_response({}, build_speechlet_response(
         card_title, speech_output, None, should_end_session))
 
-
+'''
 def create_favorite_color_attributes(favorite_color):
     return {"favoriteColor": favorite_color}
-
+'''
 
 def set_color_in_session(intent, session):
     """ Sets the color in the session and prepares the speech to reply to the
@@ -196,7 +196,133 @@ def butter_milk_sub():
     should_end_session = False
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
+        
+def brown_sugar_sub():
 
+    session_attributes = {}
+    card_title = "BrownSugar"
+    speech_output = "A good substitute for brown sugar is one cup white sugar, plus one quarter cup" \
+                    "molasses.  You may need to decrease the liquid in the recipe.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+        
+def baking_powder_sub():
+
+    session_attributes = {}
+    card_title = "BrownSugar"
+    speech_output = "For one teaspoon baking powder, combine one-quarter teaspoon baking soda, plus one half teaspoon cream of tartar.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
+def half_and_half_sub():
+
+    session_attributes = {}
+    card_title = "HalfandHalf"
+    speech_output = "For one cup half and half, substitute with one tablespoon melted butter, plus enough whole milk to make one cup.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
+def molasses_sub():
+
+    session_attributes = {}
+    card_title = "MoleassesSub"
+    speech_output = "Molasses has a distinct flavor, but if you need to substitute it try replacing with honey, dark corn syrup, or maple syrup.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+        
+def un_choc_sub():
+
+    session_attributes = {}
+    card_title = "UnChocSub"
+    speech_output = "For one ounce unsweented chocolate, substitute with three tablespoons unsweetend cocoa powder, with one tablespoon melted shortening, butter, or oil.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+        
+def ricotta_sub():
+
+    session_attributes = {}
+    card_title = "RicottaSub"
+    speech_output = "A good substitute for ricotta cheese is cottage cheese.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+        
+def heavy_cream_sub():
+
+    session_attributes = {}
+    card_title = "HeavyCreamSub"
+    speech_output = "For one cup heavy cream, substitute with three quarter cups milk, plus three tablespoons melted butter. Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
+def self_rising_sub():
+
+    session_attributes = {}
+    card_title = "SelfRisingSub"
+    speech_output = "For one cup self rising flour, substitute with one cup all purpose flour, plus one and a half teaspoons baking powder, and one quarter teaspoon salt. Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+        
+def not_found():
+
+    session_attributes = {}
+    card_title = "NotFound"
+    speech_output = "Sorry, I don't seem to know that one. Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
 # --------------- Events ------------------
 
 def on_session_started(session_started_request, session):
@@ -227,6 +353,7 @@ def on_intent(intent_request, session):
     intent_name = intent_request['intent']['name']
 
     # Dispatch to your skill's intent handlers
+
     if intent_name == "MyColorIsIntent":
         return set_color_in_session(intent, session)
     elif intent_name == "WhatsMyColorIntent":
@@ -237,14 +364,32 @@ def on_intent(intent_request, session):
         return sour_cream_sub()
     elif intent_name == "ButterMilkIntent":
         return butter_milk_sub()
+    elif intent_name == "BrownSugarIntent":
+        return brown_sugar_sub()
+    elif intent_name == "BakingPowderIntent":
+        return baking_powder_sub()
+    elif intent_name == "HalfandHalfIntent":
+        return half_and_half_sub()
+    elif intent_name == "MolassesIntent":
+        return molasses_sub()
+    elif intent_name == "UnChocIntent":
+        return un_choc_sub()
+    elif intent_name == "RicottaIntent":
+        return ricotta_sub()
+    elif intent_name == "HeavyCreamIntent":
+        return heavy_cream_sub()
+    elif intent_name == "SelfRisingIntent":
+        return self_rising_sub()
     elif intent_name == "ContinueIntent":
         return keep_going()
     elif intent_name == "AMAZON.HelpIntent":
         return get_welcome_response()
     elif intent_name == "AMAZON.CancelIntent" or intent_name == "AMAZON.StopIntent":
         return handle_session_end_request()
+    elif intent_name != "ButterIntent" or "SourCreamIntent" or "ButterMilkIntent" or "BrownSugarIntent" or "BakingPowderIntent" or "HalfandHalfIntent" or "MolassesIntent" or "UnChocIntent" or "RicottaIntent" or "HeavyCreamIntent" or "SelfRisingIntent":
+        return not_found()
     else:
-        raise ValueError("Invalid intent")
+        return not_found()
 
 
 def on_session_ended(session_ended_request, session):
