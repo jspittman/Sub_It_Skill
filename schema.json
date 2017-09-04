@@ -23,6 +23,33 @@
     },
     {
       "intent": "SourCreamIntent"
+    },
+    {
+      "intent": "ButterMilkIntent"
+    },
+    {
+      "intent": "BrownSugarIntent"
+    },
+    {
+      "intent": "BakingPowderIntent"
+    },
+    {
+      "intent": "HalfandHalfIntent"
+    },
+    {
+      "intent": "MolassesIntent"
+    },
+    {
+      "intent": "UnChocIntent"
+    },
+    {
+      "intent": "RicottaIntent"
+    },
+    {
+      "intent": "HeavyCreamIntent"
+    },
+    {
+      "intent": "ContinueIntent"
     }
   ]
 }
