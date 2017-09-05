@@ -1,24 +1,16 @@
-WhatsMyColorIntent what's my favorite color
-WhatsMyColorIntent what is my favorite color
-WhatsMyColorIntent what's my color
-WhatsMyColorIntent what is my color
-WhatsMyColorIntent my color
-WhatsMyColorIntent my favorite color
-WhatsMyColorIntent get my color
-WhatsMyColorIntent get my favorite color
-WhatsMyColorIntent give me my favorite color
-WhatsMyColorIntent give me my color
-WhatsMyColorIntent what my color is
-WhatsMyColorIntent what my favorite color is
+RequestIntent {NewRequest}
 MyColorIsIntent my favorite color is {Color}
-ButterIntent butter
+WhatsMyColorIntent what's my favorite color
+WhatsMyColorIntent what my favorite color is
+AMAZON.StopIntent no but thanks
+AMAZON.StopIntent no thank you
 AMAZON.StopIntent no
 AMAZON.StopIntent none
 AMAZON.StopIntent nadda
 AMAZON.StopIntent nope
 AMAZON.StopIntent naw
+ButterIntent butter
 SourCreamIntent sour cream
-ContinueIntent yes
 ButterMilkIntent buttermilk
 ButterMilkIntent butter milk
 BrownSugarIntent brown sugar
@@ -36,3 +28,4 @@ SelfRisingIntent self rising flour
 SelfRisingIntent self raiseing flour
 SelfRisingIntent self flour
 SelfRisingIntent self rising flower
+ContinueIntent yes
