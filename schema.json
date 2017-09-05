@@ -10,6 +10,15 @@
       "intent": "MyColorIsIntent"
     },
     {
+      "slots": [
+        {
+          "name": "NewRequest",
+          "type": "REQUEST_FROM_USERS"
+        }
+      ],
+      "intent": "RequestIntent"
+    },
+    {
       "intent": "WhatsMyColorIntent"
     },
     {
@@ -50,6 +59,15 @@
     },
     {
       "intent": "SelfRisingIntent"
+    },
+    {
+      "intent": "FoodIntent"
+    },
+    {
+      "intent": "DrinkIntent"
+    },
+    {
+      "intent": "OilIntent"
     },
     {
       "intent": "ContinueIntent"
