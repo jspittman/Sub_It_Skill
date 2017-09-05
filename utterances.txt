@@ -1,14 +1,23 @@
+MyColorIsIntent {Color}
 RequestIntent {NewRequest}
-MyColorIsIntent my favorite color is {Color}
-WhatsMyColorIntent what's my favorite color
-WhatsMyColorIntent what my favorite color is
+WhatsMyColorIntent whatever
+AMAZON.StopIntent shut the hell up
+AMAZON.StopIntent shut the heck up
+AMAZON.StopIntent shut up
 AMAZON.StopIntent no but thanks
 AMAZON.StopIntent no thank you
+AMAZON.StopIntent no thanks
 AMAZON.StopIntent no
 AMAZON.StopIntent none
 AMAZON.StopIntent nadda
 AMAZON.StopIntent nope
 AMAZON.StopIntent naw
+AMAZON.StopIntent negatory
+AMAZON.StopIntent no i appreciate it
+AMAZON.StopIntent hell no
+AMAZON.StopIntent heck no
+AMAZON.StopIntent all done
+AMAZON.StopIntent all finished
 ButterIntent butter
 SourCreamIntent sour cream
 ButterMilkIntent buttermilk
@@ -28,4 +37,13 @@ SelfRisingIntent self rising flour
 SelfRisingIntent self raiseing flour
 SelfRisingIntent self flour
 SelfRisingIntent self rising flower
+OilIntent oil
+OilIntent cooking oil
+OilIntent vegetable oil
+OilIntent canola oil
+FoodIntent food
+DrinkIntent drink
+DrinkIntent drinks
+DrinkIntent alcohol
+DrinkIntent juice
 ContinueIntent yes
