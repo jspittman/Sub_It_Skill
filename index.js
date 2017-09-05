@@ -88,18 +88,11 @@ def set_color_in_session(intent, session):
     if 'Color' in intent['slots']:
         favorite_color = intent['slots']['Color']['value']
         session_attributes = create_favorite_color_attributes(favorite_color)
-        speech_output = "I now know your favorite color is " + \
-                        favorite_color + \
-                        ". You can ask me your favorite color by saying, " \
-                        "what's my favorite color?"
-        reprompt_text = "You can ask me your favorite color by saying, " \
-                        "what's my favorite color?"
+        speech_output = "Sorry, I don't seem to know that one. Would you like another sub?"
+        reprompt_text = "Would you like another sub?"
     else:
-        speech_output = "I'm not sure what your favorite color is. " \
-                        "Please try again."
-        reprompt_text = "I'm not sure what your favorite color is. " \
-                        "You can tell me your favorite color by saying, " \
-                        "my favorite color is red."
+        speech_output = "Sorry, I don't seem to know that one. Would you like another sub?"
+        reprompt_text = "Would you like another sub?"
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
 
@@ -110,12 +103,10 @@ def get_color_from_session(intent, session):
 
     if session.get('attributes', {}) and "favoriteColor" in session.get('attributes', {}):
         favorite_color = session['attributes']['favoriteColor']
-        speech_output = "Your favorite color is " + favorite_color + \
-                        ". Goodbye."
-        should_end_session = True
+        speech_output = "Sorry, I don't seem to know that one. Would you like another sub?"
+        should_end_session = False
     else:
-        speech_output = "I'm not sure what your favorite color is. " \
-                        "You can say, my favorite color is red."
+        speech_output = "Sorry, I don't seem to know that one. Would you like another sub?"
         should_end_session = False
 
     # Setting reprompt_text to None signifies that we do not want to reprompt
@@ -155,7 +146,7 @@ def butter_sub():
     session_attributes = {}
     card_title = "ButterSub"
     speech_output = "Butter is a tricky one.  For baking, you can substitute with" \
-                    "an equal amount of margarine or lard. For cooking, substitute" \
+                    "an equal amount of margarine or lard. For cooking, substitute " \
                     "a smaller amount of oil.  Would you like another sub?"
  
     # If the user either does not reply to the welcome message or says something
@@ -310,11 +301,53 @@ def self_rising_sub():
     return build_response(session_attributes, build_speechlet_response(
         card_title, speech_output, reprompt_text, should_end_session))
         
+def oil_sub():
+
+    session_attributes = {}
+    card_title = "OilSub"
+    speech_output = "For cooking oils in baked goods, a good substitute is an equal amount of melted butter, or mayonaise, or coconut oil.  You can also try fruit puree like applesauce but add half the called amount.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
+def food_sub():
+
+    session_attributes = {}
+    card_title = "FoodSub"
+    speech_output = "You can specify the specific ingredient you'd like to sub for."
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+
+def drink_sub():
+
+    session_attributes = {}
+    card_title = "SelfRisingSub"
+    speech_output = "I don't currently cover drink substitutions, but I'm learning.  You can leave a comment on my skill page if you'd like us to add a substitution.  Would you like another sub?"
+ 
+    # If the user either does not reply to the welcome message or says something
+    # that is not understood, they will be prompted again with this text.
+    reprompt_text = "You can tell me what ingredient you'd like to sub. "
+
+    should_end_session = False
+    return build_response(session_attributes, build_speechlet_response(
+        card_title, speech_output, reprompt_text, should_end_session))
+        
 def not_found():
 
     session_attributes = {}
     card_title = "NotFound"
-    speech_output = "Sorry, I don't seem to know that one. Would you like another sub?"
+    speech_output = "Sorry, I don't seem to know that one.  You can leave a comment on my skill page if you'd like to see a sub added.  Would you like to request a different sub?"
  
     # If the user either does not reply to the welcome message or says something
     # that is not understood, they will be prompted again with this text.
@@ -358,6 +391,8 @@ def on_intent(intent_request, session):
         return set_color_in_session(intent, session)
     elif intent_name == "WhatsMyColorIntent":
         return get_color_from_session(intent, session)
+    elif intent_name == "RequestIntent":
+        return not_found()
     elif intent_name == "ButterIntent":
         return butter_sub()
     elif intent_name == "SourCreamIntent":
@@ -380,6 +415,12 @@ def on_intent(intent_request, session):
         return heavy_cream_sub()
     elif intent_name == "SelfRisingIntent":
         return self_rising_sub()
+    elif intent_name == "OilIntent":
+        return oil_sub()
+    elif intent_name == "FoodIntent":
+        return food_sub()
+    elif intent_name == "DrinkIntent":
+        return drink_sub()
     elif intent_name == "ContinueIntent":
         return keep_going()
     elif intent_name == "AMAZON.HelpIntent":
