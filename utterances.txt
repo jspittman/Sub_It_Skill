@@ -1,6 +1,6 @@
-MyColorIsIntent {Color}
+WhatsMyColorIntent blue
 RequestIntent {NewRequest}
-WhatsMyColorIntent whatever
+AMAZON.CancelIntent cancel
 AMAZON.StopIntent shut the hell up
 AMAZON.StopIntent shut the heck up
 AMAZON.StopIntent shut up
@@ -37,13 +37,13 @@ SelfRisingIntent self rising flour
 SelfRisingIntent self raiseing flour
 SelfRisingIntent self flour
 SelfRisingIntent self rising flower
-OilIntent oil
-OilIntent cooking oil
-OilIntent vegetable oil
-OilIntent canola oil
 FoodIntent food
 DrinkIntent drink
 DrinkIntent drinks
 DrinkIntent alcohol
 DrinkIntent juice
+OilIntent oil
+OilIntent cooking oil
+OilIntent vegetable oil
+OilIntent canola oil
 ContinueIntent yes
