@@ -3,15 +3,6 @@
     {
       "slots": [
         {
-          "name": "Color",
-          "type": "LIST_OF_COLORS"
-        }
-      ],
-      "intent": "MyColorIsIntent"
-    },
-    {
-      "slots": [
-        {
           "name": "NewRequest",
           "type": "REQUEST_FROM_USERS"
         }
@@ -26,6 +17,9 @@
     },
     {
       "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
     },
     {
       "intent": "ButterIntent"
